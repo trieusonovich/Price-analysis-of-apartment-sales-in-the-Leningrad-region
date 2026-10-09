@@ -18,8 +18,6 @@ An exploratory data analysis project on apartment listings in Saint Petersburg a
 - [Key Results](#key-results)
 - [Statistical Tests](#statistical-tests)
 - [Outlier Analysis](#outlier-analysis)
-- [Practical Recommendations](#practical-recommendations)
-- [Limitations](#limitations)
 - [Author](#author)
 
 ---
@@ -214,5 +212,5 @@ Using the IQR method on `price_per_sqm`:
 ## Author
 
 **Nguyen Dinh Trieu**
-Economics (Analytical Economics and Econometrics), Plekhanov Russian University of Economics
+Economics (Analytical Economics and Econometrics)
 [trieu31072004@gmail.com](mailto:trieu31072004@gmail.com)
