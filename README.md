@@ -211,35 +211,6 @@ Using the IQR method on `price_per_sqm`:
 - Median ceiling height: 2.7 m; many have ceilings of 3.0–3.43 m
 - Median rooms: 2 — medium-sized apartments
 
-**Possible explanations:**
-
-- Premium locations close to the city centre
-- High ceilings associated with the luxury segment
-- Listings in luxury residential complexes with premium finishes
-
-## Practical Recommendations
-
-1. **Use `total_area` as a core pricing variable** — it has the strongest correlation with price (r = 0.70).
-
-2. **Apply a location adjustment.** Price per square metre drops sharply within the first 5 km from the centre. A linear distance adjustment underestimates this effect — a piecewise or spline term would fit better.
-
-3. **Treat Saint Petersburg as a separate segment.** Price per square metre is roughly 30% higher than in nearby localities, so a single valuation model for the whole region may not be appropriate.
-
-4. **Summer may be a favourable buying window.** Prices per square metre are lower in June–August while supply remains available, giving buyers more negotiating room than in autumn.
-
-5. **Apply an upward adjustment for high ceilings.** Apartments with ceilings above 2.8 m consistently appear in the high-price segment, even after controlling for area.
-
-6. **Flag IQR outliers as a separate segment.** The 720 anomalous listings should be evaluated with a different model rather than the general one, since the general model would systematically under-predict them.
-
-## Limitations
-
-- **Coverage gap.** Data for 2015 and 2019 covers only six months, so yearly averages for those years are not directly comparable to full years.
-- **Non-normal distributions.** Shapiro–Wilk rejects normality for both price-per-m² groups, and Levene rejects equal variances — the t-test is formally approximate, though the sample is large enough for the Central Limit Theorem to apply.
-- **Missing `ceiling_height` in 38.8% of rows.** Filling with the median reduces variance and may weaken the apparent relationship between ceiling height and price.
-- **Geographic scope.** Results are specific to Saint Petersburg and the Leningrad region and may not generalise to other markets.
-
-**Possible next steps:** build a regression model on log-price, apply gradient boosting (XGBoost/LightGBM) for price prediction, add macroeconomic variables (interest rates, construction volumes), and split the model by locality to capture local price dynamics.
-
 ## Author
 
 **Nguyen Dinh Trieu**
